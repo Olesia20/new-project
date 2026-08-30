@@ -5,7 +5,7 @@ body {
   flex-direction: column;
   align-items: center;
   font-family: "Rationale", sans-serif;
-  font-weight: 400;
+
   font-style: normal;
 }
 .clock-number {
@@ -19,7 +19,7 @@ body {
   width: 200px;
   height: 200px;
   border-radius: 50%;
-  background: #e0ddd7;
+  background: #e0ddd8;
   position: relative;
   box-shadow:
     15px 15px 30px rgba(0, 0, 0, 0.15),
@@ -63,40 +63,37 @@ body {
 }
 .minute-hand {
   width: 2px;
-  height: 70px;
+  height: 80px;
 }
 .second-hand {
   width: 2px;
   height: 80px;
-  background: #e78383;
+  background: #e88383;
 }
 footer {
   text-align: center;
 }
 .container {
-  margin-top: 40px;
-  background: #e0ddd7;
+  background: #e0ddd8;
   box-shadow:
     10px 10px 10px rgba(0, 0, 0, 0.15),
     -10px -10px 10px rgba(241, 241, 241, 0.8);
-  width: 500px;
-  height: 500px;
+  max-width: 550px;
   border-radius: 30px;
-  margin-bottom: 30px;
+  margin: 5px auto;
   text-align: center;
   display: grid;
-  grid-template-columns: 250px 250px;
+  grid-template-columns: 275px 275px;
 }
 .time {
   background: #dbd6ce;
   border-radius: 40px;
   box-shadow:
-    inset 8px 8px 4px rgba(40, 39, 39, 0.15),
+    inset 8px 8px 4px rgba(40, 38, 38, 0.15),
     inset -8px -8px 8px rgba(242, 241, 241, 0.8);
-
-  padding: 40px;
-
+  padding: 15px;
   margin: 20px;
+  margin-bottom: 20px;
   font-size: 50px;
 }
 .day {
@@ -104,8 +101,38 @@ footer {
 }
 .forcast {
   display: grid;
-  grid-template-columns: 70px 70px 70px 70px 70px 70px 70px;
+  grid-template-columns: 80px 80px 80px 80px 80px 80px;
   font-size: 20px;
   margin: 20px;
-  padding: 10px;
+  padding: 20px;
+}
+
+.input-search {
+  margin: 20px;
+}
+.input-city {
+  border-radius: 20px;
+  background-color: #dbd6ce;
+  margin: 10px;
+  padding: 20px;
+  border: none;
+  box-shadow:
+    inset 8px 8px 6px rgba(40, 38, 38, 0.15),
+    inset -8px -8px 8px rgba(242, 241, 241, 0.8);
+  /* box-shadow:
+    10px 10px 10px rgba(0, 0, 0, 0.15),
+    -10px -10px 10px rgba(241, 241, 241, 0.8); */
+}
+.input-submit {
+  border-radius: 20px;
+  background-color: #dbd6ce;
+  border: none;
+  margin: 10px;
+  padding: 20px;
+  box-shadow:
+    10px 10px 10px rgba(0, 0, 0, 0.15),
+    -10px -10px 10px rgba(241, 241, 241, 0.8);
+  /* box-shadow:
+    inset 8px 8px 3px rgba(40, 38, 38, 0.15),
+    inset -8px -8px 5px rgba(242, 241, 241, 0.8); */
 }
