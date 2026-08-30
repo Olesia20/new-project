@@ -1,0 +1,94 @@
+body {
+  background: #dbd6ce;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.clock-number {
+  margin: 0;
+  /* min-height: 60vh; */
+  display: flex;
+  justify-content: center;
+}
+.clock {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: #e0ddd7;
+  position: relative;
+  box-shadow:
+    15px 15px 30px rgba(0, 0, 0, 0.15),
+    -15px -15px 30px rgba(255, 255, 255, 0.8);
+}
+.namber {
+  position: absolute;
+  font-size: 25px;
+}
+.namber12 {
+  top: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.namber3 {
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.namber6 {
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.namber9 {
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.hand {
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  transform-origin: bottom;
+  background: #555;
+  border-radius: 20px;
+}
+.hour-hand {
+  width: 2px;
+  height: 50px;
+}
+.minute-hand {
+  width: 2px;
+  height: 80px;
+}
+.second-hand {
+  width: 2px;
+  height: 80px;
+  background: #e78383;
+}
+footer {
+  text-align: center;
+}
+.container {
+  margin-top: 40px;
+  background: #e0ddd7;
+  width: 400px;
+  border-radius: 30px;
+
+  text-align: center;
+  display: grid;
+  grid-template-columns: 200px 200px;
+}
+.time {
+  background: #dbd6ce;
+  border-radius: 40px;
+
+  padding: 20px;
+  padding-left: 60px;
+  margin: 20px 20px;
+  font-size: 50px;
+}
+.day {
+  margin-top: 35px;
+}
