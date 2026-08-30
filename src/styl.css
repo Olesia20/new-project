@@ -1,11 +1,10 @@
 body {
   background: #dbd6ce;
-  margin: 0;
+  /* margin: 0; */
   display: flex;
   flex-direction: column;
   align-items: center;
   font-family: "Rationale", sans-serif;
-
   font-style: normal;
 }
 .clock-number {
@@ -116,6 +115,7 @@ footer {
   margin: 10px;
   padding: 20px;
   border: none;
+  max-width: 70%;
   box-shadow:
     inset 8px 8px 6px rgba(40, 38, 38, 0.15),
     inset -8px -8px 8px rgba(242, 241, 241, 0.8);
@@ -132,6 +132,7 @@ footer {
   box-shadow:
     10px 10px 10px rgba(0, 0, 0, 0.15),
     -10px -10px 10px rgba(241, 241, 241, 0.8);
+
   /* box-shadow:
     inset 8px 8px 3px rgba(40, 38, 38, 0.15),
     inset -8px -8px 5px rgba(242, 241, 241, 0.8); */
