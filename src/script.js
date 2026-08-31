@@ -23,16 +23,26 @@ function setClock() {
 setClock();
 
 setInterval(setClock, 1000);
-function handleSearchSubmit (event){
-  event.preventDefault()
-  let searchInput = document.querySelector("#search-form-input");
+function updateWeather(response) {
+  let temperatureElemment = document.querySelector("#temperature");
+  let temperature = response.data.temperature.current;
   let cityElemment = document.querySelector("#weather-app-city");
-  cityElemment.innerHTML = searchInput.value
+  cityElemment.innerHTML = response.data.city;
+  temperatureElemment.innerHTML = Math.round(temperature);
+  console.log(response.data.temperature.current);
+}
+function searchCity(city) {
+  let apiKey = "7561c89f6et45b832o8e3c5fcade60b0";
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&unit=metric`;
+  axios.get(apiUrl).then(updateWeather);
+}
+function handleSearchSubmit(event) {
+  event.preventDefault();
+  let searchInput = document.querySelector("#search-form-input");
 
-
-  console.log(searchInput.value)
+  searchCity(searchInput.value);
 }
 let searchFormElemment = document.querySelector("#search-form");
 
-searchFormElemment.addEventListener("submit", handleSearchSubmit)
-
+searchFormElemment.addEventListener("submit", handleSearchSubmit);
+searchCity("Kyiv");
