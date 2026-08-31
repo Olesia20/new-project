@@ -23,3 +23,16 @@ function setClock() {
 setClock();
 
 setInterval(setClock, 1000);
+function handleSearchSubmit (event){
+  event.preventDefault()
+  let searchInput = document.querySelector("#search-form-input");
+  let cityElemment = document.querySelector("#weather-app-city");
+  cityElemment.innerHTML = searchInput.value
+
+
+  console.log(searchInput.value)
+}
+let searchFormElemment = document.querySelector("#search-form");
+
+searchFormElemment.addEventListener("submit", handleSearchSubmit)
+
