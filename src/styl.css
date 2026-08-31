@@ -95,10 +95,15 @@ body {
   font-size: 50px;
 }
 .weather-app-deteils {
-  margin-top: 15px;
   font-size: 18px;
-  line-height: 1.5;
+  line-height: 1.2;
 }
+.wether-app-icon {
+  width: 55px;
+  margin-right: 95px;
+  margin-bottom: -45px;
+}
+
 #humidity {
   color: #4d774d;
   font-weight: 500;
