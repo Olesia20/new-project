@@ -76,13 +76,20 @@ body {
   box-shadow:
     10px 10px 10px rgba(0, 0, 0, 0.15),
     -10px -10px 10px rgba(241, 241, 241, 0.8);
-  max-width: 550px;
   border-radius: 30px;
-  margin: 5px auto;
+  max-width: 550px;
   text-align: center;
-
+  margin: 0 auto;
   display: grid;
   grid-template-columns: 275px 275px;
+  gap: 20px;
+}
+@media (max-width: 600px) {
+  .container {
+    grid-template-columns: 1fr;
+    width: 90%;
+    box-sizing: border-box;
+  }
 }
 .time {
   background: #dbd6ce;
@@ -99,7 +106,7 @@ body {
   font-size: 18px;
   line-height: 1.2;
 }
-.wether-app-icon {
+.weather-app-icon {
   width: 55px;
   margin-right: 95px;
   margin-bottom: -45px;
@@ -120,9 +127,6 @@ body {
 }
 
 .weather-app-temperture {
-  font-size: 30px;
-}
-.weather-app-icon {
   font-size: 30px;
 }
 .weather-app-unit {
@@ -157,6 +161,10 @@ body {
   box-shadow:
     inset 8px 8px 4px rgba(40, 38, 38, 0.15),
     inset -8px -8px 8px rgba(242, 241, 241, 0.8);
+}
+.weather-forecast-icon {
+  width: 40px;
+  margin-top: -8px;
 }
 strong {
   color: #4d774d;

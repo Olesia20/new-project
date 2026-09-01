@@ -43,7 +43,7 @@ function updateWeather(response) {
   timeElemment.innerHTML = formatDate(data);
   iconElemment.innerHTML = `  <img
             src="${response.data.condition.icon_url}"
-            alt="" class = "wether-app-icon"
+            alt="" class = "weather-app-icon"
           />`;
   getForecast(response.data.city);
 }
@@ -100,7 +100,9 @@ function displayForecast(response) {
               day.temperature.minimum,
             )}°</div>
           </div>
-          <div class="weather-forecast-icon">☀️</div>
+          <div >
+          <img src = "${day.condition.icon_url}"/class="weather-forecast-icon"> 
+          </div>
         </div>`;
   });
   forecastElement.innerHTML = forecastHtml;
