@@ -1,10 +1,5 @@
 body {
   background: #dbd6ce;
-
-  /* margin: 0; */
-  /* display: flex;
-  flex-direction: column;
-  align-items: center; */
   font-family: "Rationale", sans-serif;
   font-style: normal;
 }
@@ -77,18 +72,34 @@ body {
     10px 10px 10px rgba(0, 0, 0, 0.15),
     -10px -10px 10px rgba(241, 241, 241, 0.8);
   border-radius: 30px;
-  max-width: 550px;
+  width: 570px;
+  max-width: calc(100% - 30px);
+  box-sizing: border-box;
   text-align: center;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 275px 275px;
   gap: 20px;
+  min-width: 0;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 @media (max-width: 600px) {
   .container {
+    width: calc(100% - 30px);
     grid-template-columns: 1fr;
-    width: 90%;
     box-sizing: border-box;
+    padding: 10px;
+  }
+  .time {
+    margin: 10px;
+    font-size: 40px;
+  }
+  .forcast {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 5px;
+    margin: 15px 0;
+    padding: 0;
   }
 }
 .time {
@@ -101,6 +112,9 @@ body {
   margin: 20px;
   margin-bottom: 20px;
   font-size: 50px;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
 }
 .weather-app-deteils {
   font-size: 18px;
@@ -136,12 +150,12 @@ body {
   text-align: center;
 }
 .forcast {
+  text-align: center;
   display: grid;
-  grid-template-columns: 70px 70px 70px 70px 70px;
-
-  grid-gap: 30px;
+  grid-template-columns: repeat(5, 80px);
+  padding-left: 25px;
+  gap: 20px;
   margin: 20px;
-  padding-left: 18px;
 }
 .weather-forecast-temperatures {
   padding-top: 5px;
